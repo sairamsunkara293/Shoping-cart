@@ -1,1 +1,7 @@
-<p>recipe-item works!</p>
+<div class="media border p-3 bg-info rounded" (click)="onSelected()">
+    <div class="media-body">
+        <h5 class="mt-0 mb-1">{{ recipe.name }}</h5>
+        {{ recipe.description }}
+    </div>
+    <img src="{{ recipe.imagePath }}" class="ml-3 img-responsiv rounded" alt="..." style="max-height: 80px;" />
+</div>
