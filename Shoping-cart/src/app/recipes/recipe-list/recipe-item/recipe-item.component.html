@@ -3,5 +3,5 @@
         <h5 class="mt-0 mb-1">{{ recipe.name }}</h5>
         {{ recipe.description }}
     </div>
-    <img src="{{ recipe.imagePath }}" class="ml-3 img-responsiv rounded" alt="..." style="max-height: 80px;" />
+    <img [src]="recipe.imagePath" class="ml-3 img-responsiv rounded" alt="{{ recipe.name }}" style="max-height: 80px;" />
 </div>
