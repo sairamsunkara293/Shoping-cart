@@ -1,4 +1,4 @@
-<div class="media border p-3 bg-info rounded" (click)="onSelected()">
+<div class="media border p-3 cursor-pointer rounded mb-3" [routerLink]="[index]" routerLinkActive="bg-info text-light">
     <div class="media-body">
         <h5 class="mt-0 mb-1">{{ recipe.name }}</h5>
         {{ recipe.description }}

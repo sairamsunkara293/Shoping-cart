@@ -2,13 +2,11 @@
     <div class="col-sm-12">
         <img [src]="recipe.imagePath" alt="{{ recipe.name }}" class="img-resposive" />
     </div>
-</div>
-<div class="row">
+
     <div class="col-sm-12">
         <h1>{{ recipe.name }}</h1>
     </div>
-</div>
-<div class="row">
+
     <div class="col-sm-12">
         <div class="dropdown" appDropdown #r="appDropDown">
             <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -17,18 +15,16 @@
             <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" [ngClass]="{ show: r.isOpen }">
                 <a class="dropdown-item" (click)="onAddToShoppingList()" style="cursor: pointer;">To shoping</a
         >
-        <a class="dropdown-item" href="#">Edit Recipe</a>
-                <a class="dropdown-item" href="#">Delete Recipe</a>
+        <a class="dropdown-item" (click)="onEditRecipe()">Edit Recipe</a>
+                <a class="dropdown-item">Delete Recipe</a>
             </div>
         </div>
     </div>
-</div>
-<div class="row">
+
     <div class="col-sm-12">
         {{ recipe.description }}
     </div>
-</div>
-<div class="row">
+
     <div class="col-sm-12">
         <ul class="list-group">
             <li class="list-group-item d-flex" *ngFor="let ingredient of recipe.ingredients">
